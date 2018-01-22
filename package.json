@@ -2,13 +2,27 @@
   "name": "javascript-development-environment",
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Le Van Hop",
-  "scripts": {},
+  "scripts": {
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "babel-node buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3080 --subdomain vanhop",
+    "share": "npm-run-all --parallel open:src localtunnel"
+  },
   "author": "Le Van Hop",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chalk": "^2.3.0",
     "express": "^4.16.2",
     "localtunnel": "^1.8.3",
+    "npm-run-all": "^4.1.2",
     "nsp": "^3.1.0",
     "open": "0.0.5"
   }
