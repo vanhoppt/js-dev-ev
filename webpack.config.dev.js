@@ -30,7 +30,7 @@ export default {
         ]
       },
       {
-        test: /\.(js\jsx)$/,
+        test: /\.(js|jsx)$/,
         use: 'babel-loader'
       }
     ]
