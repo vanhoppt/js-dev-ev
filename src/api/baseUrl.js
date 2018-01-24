@@ -1,5 +1,5 @@
 export default function getBaseUrl(){
-  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3081/' : '/';
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3081/' : 'https://thawing-basin-83711.herokuapp.com/';
 }
 
 function getQueryStringParameterByName(name, url) {
