@@ -1,3 +1,4 @@
+import './index.css';
 import {getUsers, deleteUsers} from './api/userApi';
 
 getUsers().then(result => {
